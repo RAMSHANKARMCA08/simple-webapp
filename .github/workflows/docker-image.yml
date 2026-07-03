@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'docker/Dockerfile'
+      - 'Dockerfile'
   workflow_dispatch:
   
 permissions:
