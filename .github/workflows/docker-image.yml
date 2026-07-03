@@ -13,8 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Trivy
-        uses: aquasec/trivy:0.71.2
+      - name: Run Trivy filesystem scan
+        uses: aquasec/trivy@0.71.2
         with:
           scan-type: fs
           scan-ref: .
