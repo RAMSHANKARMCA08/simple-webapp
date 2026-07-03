@@ -33,7 +33,7 @@ jobs:
 
       - name: Build Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/simple-webapp:${{ github.sha }} .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/simple-webapp:1.0 .
 
 #      - name: Scan Docker Image
 #        uses: aquasec/trivy@0.71.2
