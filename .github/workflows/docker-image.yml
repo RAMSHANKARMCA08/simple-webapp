@@ -43,11 +43,11 @@ jobs:
 #          exit-code: '1'
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/simple-webapp:${{ github.sha }}
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/simple-webapp:1.0
 
       - name: Update Deployment Image
         run: |
-          sed -i "s|image:.*|image: ${{ secrets.DOCKER_USERNAME }}/simple-webapp:${{ github.sha }}|" k8s/deployment.yaml
+          sed -i "s|image:.*|image: ${{ secrets.DOCKER_USERNAME }}/simple-webapp:1.0 |" k8s/deployment.yaml
 
       - name: Commit Manifest
         run: |
