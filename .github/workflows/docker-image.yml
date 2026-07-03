@@ -1,4 +1,4 @@
-name: Build Scan Push
+name: Docker Image Scan & Push
 
 on:
   push:
