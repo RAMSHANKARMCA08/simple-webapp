@@ -24,7 +24,7 @@ jobs:
           tar -xzf conftest.tar.gz
           sudo mv conftest /usr/local/bin/
 
-      - name: Run OPA Policy Validation
+      - name: Run Policy Validation
         run: |
           conftest test \
             ${{ inputs.manifest }} \

@@ -29,6 +29,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y trivy
 
+          trivy --version
+
       - name: Filesystem Scan
         run: |
           trivy fs \
