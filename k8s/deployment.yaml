@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: web
-        image: a2zram/simple-webapp:20260703_16 
+        image: a2zram/simple-webapp:20260704_20
         ports:
         - containerPort: 80
