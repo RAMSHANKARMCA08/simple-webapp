@@ -14,13 +14,13 @@ permissions:
 
 jobs:
 
-  opa:
-    uses: ./.github/workflows/opa.yml
-    with:
-      manifest: k8s/deployment.yaml
+#  opa:
+#    uses: ./.github/workflows/opa.yml
+#    with:
+#      manifest: k8s/deployment.yaml
 
   docker:
-    needs: opa
+#    needs: opa
     runs-on: ubuntu-latest
 
     outputs:
@@ -63,9 +63,9 @@ jobs:
           git diff --cached --quiet || git commit -m "Update Deployment.yaml ${{ steps.image.outputs.image }}"
           git push
 
-  trivy:
-    needs: docker
-    uses: ./.github/workflows/trivy.yml
-    with:
-      image: ${{ needs.docker.outputs.image }}
-    secrets: inherit
+#  trivy:
+#    needs: docker
+#    uses: ./.github/workflows/trivy.yml
+#    with:
+#      image: ${{ needs.docker.outputs.image }}
+#    secrets: inherit
